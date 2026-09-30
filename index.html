@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>AV Cafeteria – Menu</title>
+<meta name="description" content="Browse the AV Cafeteria menu – cold drinks, ice cream, Chinese and Indian – and place your order online.">
+<meta name="theme-color" content="#0b7f86">
+<meta property="og:type" content="website">
+<meta property="og:title" content="AV Cafeteria – Menu">
+<meta property="og:description" content="Cold drinks, ice cream, Chinese and Indian. Browse the menu and order online.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8D%9B%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#fffaf3; --ink:#241a16; --muted:#6f625a; --card:#ffffff; --line:#eadfd2;
+  --brand:linear-gradient(120deg,#0b7f86,#c22f86 40%,#c8302b 72%,#e08a10);
+  color-scheme:light dark;
+  box-sizing:border-box; padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){--bg:#14110f; --ink:#f7efe6; --muted:#b9ada2; --card:#211b18; --line:#3a312b;}
+}
+:root[data-theme="light"]{color-scheme:light}
+:root[data-theme="dark"]{--bg:#14110f; --ink:#f7efe6; --muted:#b9ada2; --card:#211b18; --line:#3a312b; color-scheme:dark}
+.s-drinks{--c:light-dark(#0b7f86,#4fd6d2); --t:light-dark(#dcf4f2,#10292b); --on:light-dark(#fff,#062022)}
+.s-icecream{--c:light-dark(#c22f86,#ff86c6); --t:light-dark(#fde3f0,#301428); --on:light-dark(#fff,#2e0a1f)}
+.s-chinese{--c:light-dark(#c8302b,#ff8577); --t:light-dark(#fde6df,#321716); --on:light-dark(#fff,#301008)}
+.s-indian{--c:light-dark(#b96200,#ffbb4d); --t:light-dark(#ffeecb,#31230d); --on:light-dark(#fff,#2b1a00)}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth; scroll-padding-top:84px}
+body{margin:0; background:var(--bg); color:var(--ink); font-family:'DM Sans',system-ui,sans-serif; line-height:1.5; padding-bottom:90px}
+h1,h2,h3{font-family:'Bricolage Grotesque','DM Sans',system-ui,sans-serif; margin:0}
+header{background:var(--brand); color:#fff; text-align:center; padding:76px 20px 70px; border-radius:0 0 44px 44px; position:relative; overflow:hidden}
+header::after{content:"🥤 🍨 🥡 🍛"; position:absolute; left:0; right:0; bottom:16px; letter-spacing:.6em; font-size:1.3rem; opacity:.9}
+header .kicker{display:inline-block; font-size:.85rem; font-weight:700; letter-spacing:.08em; text-transform:uppercase; padding:6px 14px; border-radius:99px; background:rgba(255,255,255,.2); backdrop-filter:blur(6px)}
+header h1{font-size:clamp(2.6rem,9vw,5rem); font-weight:800; letter-spacing:-.03em; line-height:1.02; margin-top:16px; text-shadow:0 3px 18px rgba(0,0,0,.22)}
+header p{color:#fff; opacity:.95; max-width:44ch; margin:14px auto 22px}
+nav{position:sticky; top:env(safe-area-inset-top,0px); z-index:5; display:flex; gap:8px; justify-content:center; overflow-x:auto; padding:12px 14px; background:color-mix(in srgb,var(--bg) 88%,transparent); backdrop-filter:blur(10px)}
+nav a{flex:none; color:var(--c); text-decoration:none; font-weight:700; font-size:.92rem; padding:9px 18px; border-radius:99px; background:var(--t); border:2px solid transparent; transition:transform .15s,background .2s,color .2s}
+nav a:hover,nav a:focus-visible{background:var(--c); color:var(--on); transform:translateY(-2px); outline:none}
+main{max-width:980px; margin:0 auto; padding:8px 16px 64px}
+section{margin-top:30px; background:var(--t); border-radius:32px; padding:24px; border-top:6px solid var(--c)}
+.head{display:flex; align-items:center; gap:14px}
+.head .big{width:54px; height:54px; display:grid; place-items:center; font-size:1.8rem; line-height:1; background:var(--c); border-radius:18px; box-shadow:0 6px 14px color-mix(in srgb,var(--c) 35%,transparent)}
+.head h2{font-size:2rem; color:var(--c); letter-spacing:-.02em}
+.grid{display:grid; grid-template-columns:repeat(auto-fit,minmax(min(300px,100%),1fr)); gap:14px; margin-top:20px}
+.item{display:flex; gap:14px; padding:16px; background:var(--card); border:1px solid var(--line); border-radius:22px; box-shadow:0 3px 0 color-mix(in srgb,var(--c) 30%,transparent)}
+.ico{flex:none; width:58px; height:58px; border-radius:18px; display:grid; place-items:center; font-size:1.7rem; background:color-mix(in srgb,var(--c) 16%,var(--card))}
+.body{flex:1; min-width:0}
+.top{display:flex; justify-content:space-between; align-items:flex-start; gap:10px}
+.top h3{font-size:1.08rem; font-weight:700; display:flex; align-items:center; flex-wrap:wrap; gap:8px}
+.lead{display:none}
+.price{font-weight:800; font-size:.92rem; color:var(--c); background:color-mix(in srgb,var(--c) 14%,var(--card)); padding:2px 11px; border-radius:99px; white-space:nowrap}
+.body p{margin:4px 0 0; color:var(--muted); font-size:.92rem}
+.dot{display:inline-block; width:12px; height:12px; border:1.5px solid; border-radius:3px; position:relative; flex:none}
+.dot::after{content:""; position:absolute; inset:2px; border-radius:50%; background:currentColor}
+.dot.v{color:#1f9d4d}.dot.n{color:#d0342c}
+.legend{display:flex; gap:18px; justify-content:center; color:var(--muted); font-size:.88rem; margin-top:30px}
+.legend span{display:flex; align-items:center; gap:6px}
+footer{text-align:center; padding:28px 20px 40px; color:var(--muted); font-size:.9rem}
+.act{margin-top:10px}
+.add{font:inherit; font-weight:700; font-size:.88rem; color:var(--on); background:var(--c); border:0; border-radius:99px; padding:6px 20px; cursor:pointer; transition:transform .15s}
+.add:hover,.add:focus-visible{transform:scale(1.06); outline:2px solid var(--c); outline-offset:2px}
+.step{display:inline-flex; align-items:center; gap:2px; background:var(--c); color:var(--on); border-radius:99px; padding:2px}
+.step b{min-width:28px; text-align:center}
+.step button,.q button{font:inherit; font-weight:800; width:28px; height:28px; border:0; border-radius:50%; background:rgba(255,255,255,.25); color:inherit; cursor:pointer}
+.step button:focus-visible,.q button:focus-visible{outline:2px solid var(--ink); outline-offset:1px}
+.bar{position:fixed; left:0; right:0; bottom:0; z-index:8; padding:12px 16px calc(12px + env(safe-area-inset-bottom,0px)); display:flex; justify-content:center; pointer-events:none}
+.bar[hidden],.ov[hidden],.dr[hidden]{display:none}
+.bar button{pointer-events:auto; font:inherit; font-weight:800; width:100%; max-width:520px; display:flex; justify-content:space-between; padding:15px 24px; border:0; border-radius:99px; background:var(--brand); color:#fff; box-shadow:0 10px 26px rgba(0,0,0,.3); cursor:pointer}
+.ov{position:fixed; inset:0; background:rgba(0,0,0,.5); z-index:9}
+.dr{position:fixed; z-index:10; left:0; right:0; bottom:0; margin:0 auto; width:100%; max-width:560px; max-height:88%; display:flex; flex-direction:column; background:var(--card); color:var(--ink); border-radius:28px 28px 0 0; padding:22px 20px calc(20px + env(safe-area-inset-bottom,0px)); border-top:6px solid transparent; border-image:var(--brand) 1}
+.dr h2{font-size:1.5rem}
+.dr .x{position:absolute; top:14px; right:16px; font:inherit; font-size:1.4rem; background:none; border:0; color:var(--muted); cursor:pointer}
+.lines{overflow-y:auto; margin:10px 0}
+.line{display:flex; align-items:center; gap:10px; padding:10px 0; border-bottom:1px solid var(--line)}
+.line .n{flex:1}
+.q{display:inline-flex; align-items:center; gap:2px; background:var(--line); border-radius:99px; padding:2px}
+.q button{background:var(--card); color:var(--ink)}
+.q b{min-width:26px; text-align:center}
+.line .lp{min-width:64px; text-align:right; font-weight:700}
+.tot{display:flex; justify-content:space-between; font-weight:800; font-size:1.15rem; padding:8px 0}
+.dr input{font:inherit; width:100%; padding:12px 14px; border:1px solid var(--line); border-radius:14px; background:var(--bg); color:var(--ink); margin:6px 0}
+.place{font:inherit; font-weight:800; width:100%; padding:14px; border:0; border-radius:99px; background:var(--brand); color:#fff; cursor:pointer; margin-top:6px}
+.err{color:#d0342c; font-size:.88rem; min-height:1.2em; margin:0}
+.empty,.done{text-align:center; color:var(--muted); padding:22px 0}
+.done h3{font-size:1.4rem; color:var(--ink)}
+@media (max-width:520px){section{padding:18px 14px; border-radius:26px}.head h2{font-size:1.6rem}}
+</style>
+</head>
+<body>
+<header>
+  <div class="kicker">Fresh · Fast · Family friendly</div>
+  <h1>AV Cafeteria</h1>
+  <p>Cold drinks, ICE Cream, Chinese and Indian food. All under one roof, all made fresh.</p>
+</header>
+<nav aria-label="Menu sections">
+  <a href="#drinks" class="s-drinks">🥤 Cold drinks</a>
+  <a href="#icecream" class="s-icecream">🍨 Ice cream</a>
+  <a href="#chinese" class="s-chinese">🥡 Chinese</a>
+  <a href="#indian" class="s-indian">🍛 Indian</a>
+</nav>
+<main>
+
+<section id="drinks" class="s-drinks">
+  <div class="head"><span class="big">🥤</span><h2>Cold drinks</h2></div>
+  <div class="grid">
+    <div class="item"><div class="ico">🍋</div><div class="body"><div class="top"><h3>Fresh Lime Soda</h3><span class="lead"></span><span class="price">₹70</span></div><p>Lime juice, soda and a pinch of black salt. Sweet or salted.</p></div></div>
+    <div class="item"><div class="ico">🥭</div><div class="body"><div class="top"><h3>Mango Lassi</h3><span class="lead"></span><span class="price">₹110</span></div><p>Thick yogurt blended with ripe mango pulp.</p></div></div>
+    <div class="item"><div class="ico">🍑</div><div class="body"><div class="top"><h3>Iced Peach Tea</h3><span class="lead"></span><span class="price">₹100</span></div><p>Black tea, peach syrup and ice.</p></div></div>
+    <div class="item"><div class="ico">☕</div><div class="body"><div class="top"><h3>Cold Coffee</h3><span class="lead"></span><span class="price">₹120</span></div><p>Chilled coffee blended with milk and a scoop of vanilla.</p></div></div>
+    <div class="item"><div class="ico">🍉</div><div class="body"><div class="top"><h3>Watermelon Cooler</h3><span class="lead"></span><span class="price">₹90</span></div><p>Fresh watermelon juice with mint and lemon.</p></div></div>
+  </div>
+</section>
+
+<section id="icecream" class="s-icecream">
+  <div class="head"><span class="big">🍨</span><h2>Ice cream</h2></div>
+  <div class="grid">
+    <div class="item"><div class="ico">🍦</div><div class="body"><div class="top"><h3>Vanilla Bean</h3><span class="lead"></span><span class="price">₹80</span></div><p>Classic creamy vanilla with real vanilla specks.</p></div></div>
+    <div class="item"><div class="ico">🍫</div><div class="body"><div class="top"><h3>Belgian Chocolate</h3><span class="lead"></span><span class="price">₹100</span></div><p>Rich dark chocolate ice cream with cocoa nibs.</p></div></div>
+    <div class="item"><div class="ico">🍡</div><div class="body"><div class="top"><h3>Kesar Pista Kulfi</h3><span class="lead"></span><span class="price">₹110</span></div><p>Dense, slow-frozen kulfi with saffron and pistachio.</p></div></div>
+    <div class="item"><div class="ico">🍓</div><div class="body"><div class="top"><h3>Strawberry Swirl</h3><span class="lead"></span><span class="price">₹90</span></div><p>Strawberry ice cream ribboned with fruit compote.</p></div></div>
+    <div class="item"><div class="ico">🍨</div><div class="body"><div class="top"><h3>Brownie Sundae</h3><span class="lead"></span><span class="price">₹160</span></div><p>Warm brownie, vanilla scoops, chocolate sauce and nuts.</p></div></div>
+  </div>
+</section>
+
+<section id="chinese" class="s-chinese">
+  <div class="head"><span class="big">🥡</span><h2>Chinese</h2></div>
+  <div class="grid">
+    <div class="item"><div class="ico">🍜</div><div class="body"><div class="top"><h3>Veg Hakka Noodles<i class="dot v" title="Veg"></i></h3><span class="lead"></span><span class="price">₹160</span></div><p>Wok-tossed noodles with cabbage, carrot and spring onion.</p></div></div>
+    <div class="item"><div class="ico">🥢</div><div class="body"><div class="top"><h3>Veg Manchurian<i class="dot v" title="Veg"></i></h3><span class="lead"></span><span class="price">₹170</span></div><p>Crisp vegetable balls in a garlic-soy gravy.</p></div></div>
+    <div class="item"><div class="ico">🌶️</div><div class="body"><div class="top"><h3>Chilli Chicken<i class="dot n" title="Non-veg"></i></h3><span class="lead"></span><span class="price">₹240</span></div><p>Fried chicken tossed with capsicum, onion and green chilli.</p></div></div>
+    <div class="item"><div class="ico">🥣</div><div class="body"><div class="top"><h3>Hot &amp; Sour Soup<i class="dot v" title="Veg"></i></h3><span class="lead"></span><span class="price">₹120</span></div><p>Peppery, tangy broth with mushroom and tofu.</p></div></div>
+    <div class="item"><div class="ico">🥟</div><div class="body"><div class="top"><h3>Steamed Momos<i class="dot v" title="Veg"></i><i class="dot n" title="Chicken"></i></h3><span class="lead"></span><span class="price">₹130</span></div><p>Six dumplings with a spicy red chutney.</p></div></div>
+  </div>
+</section>
+
+<section id="indian" class="s-indian">
+  <div class="head"><span class="big">🍛</span><h2>Indian</h2></div>
+  <div class="grid">
+    <div class="item"><div class="ico">🍗</div><div class="body"><div class="top"><h3>Butter Chicken<i class="dot n" title="Non-veg"></i></h3><span class="lead"></span><span class="price">₹300</span></div><p>Tandoori chicken in a creamy tomato and butter gravy.</p></div></div>
+    <div class="item"><div class="ico">🧀</div><div class="body"><div class="top"><h3>Paneer Tikka Masala<i class="dot v" title="Veg"></i></h3><span class="lead"></span><span class="price">₹260</span></div><p>Grilled paneer cubes in a spiced onion-tomato masala.</p></div></div>
+    <div class="item"><div class="ico">🫘</div><div class="body"><div class="top"><h3>Dal Makhani<i class="dot v" title="Veg"></i></h3><span class="lead"></span><span class="price">₹220</span></div><p>Black lentils simmered overnight with cream and butter.</p></div></div>
+    <div class="item"><div class="ico">🍚</div><div class="body"><div class="top"><h3>Chicken Biryani<i class="dot n" title="Non-veg"></i></h3><span class="lead"></span><span class="price">₹280</span></div><p>Fragrant basmati layered with marinated chicken. Served with raita.</p></div></div>
+    <div class="item"><div class="ico">🫓</div><div class="body"><div class="top"><h3>Garlic Naan<i class="dot v" title="Veg"></i></h3><span class="lead"></span><span class="price">₹60</span></div><p>Tandoor-baked bread brushed with garlic butter.</p></div></div>
+  </div>
+</section>
+
+<div class="legend"><span><i class="dot v"></i> Veg</span><span><i class="dot n"></i> Non-veg</span></div>
+</main>
+<footer>Prices in Indian rupees, inclusive of taxes. Tell your server about any allergies.</footer>
+
+<div id="bar" class="bar" hidden><button id="open" type="button"><span id="bc"></span><span id="bt"></span></button></div>
+<div id="ov" class="ov" hidden></div>
+<aside id="dr" class="dr" role="dialog" aria-label="Your order" hidden></aside>
+<script>
+(function(){
+var items=[].slice.call(document.querySelectorAll('.item')).map(function(el,i){
+  return {id:i,el:el,name:el.querySelector('h3').textContent.trim(),price:parseInt(el.querySelector('.price').textContent.replace(/\D/g,''),10)};
+});
+var DB_URL='https://av-cafeteria-default-rtdb.firebaseio.com';
+var cart={},who='',$=function(i){return document.getElementById(i)};
+function esc(t){return t.replace(/&/g,'&amp;').replace(/</g,'&lt;')}
+function total(){var n=0,c=0;items.forEach(function(it){var q=cart[it.id]||0;n+=q*it.price;c+=q});return{n:n,c:c}}
+function save(){try{localStorage.setItem('fck-cart',JSON.stringify(cart))}catch(e){}}
+try{var o=JSON.parse(localStorage.getItem('fck-cart')||'{}');if(o&&typeof o==='object')cart=o}catch(e){}
+function set(id,d){var q=Math.max(0,(cart[id]||0)+d);if(q)cart[id]=q;else delete cart[id];save();render()}
+function render(){
+  items.forEach(function(it){
+    var a=it.el.querySelector('.act');
+    if(!a){a=document.createElement('div');a.className='act';it.el.querySelector('.body').appendChild(a)}
+    var q=cart[it.id]||0;
+    a.innerHTML=q?'<span class="step" style="--c:'+getComputedStyle(it.el).getPropertyValue('--c')+'"><button data-d="-1" data-id="'+it.id+'" aria-label="Remove one '+esc(it.name)+'">−</button><b>'+q+'</b><button data-d="1" data-id="'+it.id+'" aria-label="Add one '+esc(it.name)+'">+</button></span>':'<button class="add" data-d="1" data-id="'+it.id+'" aria-label="Add '+esc(it.name)+' to cart">Add</button>';
+  });
+  var t=total();
+  $('bar').hidden=!t.c||!$('dr').hidden;
+  $('bc').textContent='View cart · '+t.c+(t.c===1?' item':' items');
+  $('bt').textContent='₹'+t.n;
+  if(!$('dr').hidden&&!$('dr').dataset.done)drawer();
+}
+function drawer(){
+  var t=total(),h='<button class="x" data-close aria-label="Close cart">×</button><h2>Your order</h2>';
+  if(!t.c){h+='<p class="empty">Your cart is empty. Add something tasty from the menu.</p>'}
+  else{
+    h+='<div class="lines">';
+    items.forEach(function(it){var q=cart[it.id];if(!q)return;
+      h+='<div class="line"><div class="n">'+esc(it.name)+'</div><span class="q"><button data-d="-1" data-id="'+it.id+'" aria-label="Remove one">−</button><b>'+q+'</b><button data-d="1" data-id="'+it.id+'" aria-label="Add one">+</button></span><span class="lp">₹'+q*it.price+'</span></div>'});
+    h+='</div><div class="tot"><span>Total</span><span>₹'+t.n+'</span></div><input id="who" placeholder="Your name or table number" value="'+esc(who)+'" aria-label="Your name or table number"><p class="err" id="err"></p><button class="place" data-place>Place order</button>';
+  }
+  $('dr').innerHTML=h;
+}
+function openD(){$('dr').hidden=false;$('ov').hidden=false;delete $('dr').dataset.done;drawer();render()}
+function closeD(){$('dr').hidden=true;$('ov').hidden=true;render()}
+document.addEventListener('click',function(e){
+  var b=e.target.closest('button');if(b&&b.dataset.id!==undefined){set(+b.dataset.id,+b.dataset.d);return}
+  if(b&&b.id==='open')openD();
+  if(b&&b.hasAttribute('data-close'))closeD();
+  if(e.target.id==='ov')closeD();
+  if(b&&b.hasAttribute('data-place')){
+    var w=$('who');who=w.value.trim();
+    if(!who){$('err').textContent='Enter your name or table number so we can find you.';w.focus();return}
+    var t=total(),no=100+Math.floor(Math.random()*900);
+    var lines=[];
+    items.forEach(function(it){var q=cart[it.id];if(q)lines.push({name:it.name,price:it.price,qty:q})});
+    var order={orderNo:no,customer:who,items:lines,total:t.n,status:'new',createdAt:{'.sv':'timestamp'}};
+    var btn=b;btn.disabled=true;btn.textContent='Placing order…';$('err').textContent='';
+    fetch(DB_URL+'/orders.json',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(order)})
+    .then(function(r){if(!r.ok)throw new Error(r.status===401?'Permission denied by database rules (401)':'Server error (HTTP '+r.status+')');return r.json()})
+    .then(function(){
+      cart={};save();
+      $('dr').dataset.done=1;
+      $('dr').innerHTML='<button class="x" data-close aria-label="Close">×</button><div class="done"><h3>Order #'+no+' placed</h3><p>Thanks, '+esc(who)+'. Your order of ₹'+t.n+' is being prepared.</p></div><button class="place" data-close>Back to menu</button>';
+      $('bar').hidden=true;render();
+    })
+    .catch(function(e){
+      console.error('Order save failed:',e);
+      btn.disabled=false;btn.textContent='Place order';
+      $('err').textContent='Could not save order: '+(e&&e.message?e.message:'network error')+'. Please try again.';
+    });
+  }
+});
+document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!$('dr').hidden)closeD()});
+render();
+})();
+</script>
+</body>
+</html>
